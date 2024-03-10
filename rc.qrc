@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>OIP.jpg</file>
+        <file>OIP (1).jpg</file>
+        <file>OIP (2).jpg</file>
+        <file>OIP (3).jpg</file>
+    </qresource>
+</RCC>

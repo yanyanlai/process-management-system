@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1468</width>
+    <height>1100</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>-50</y>
+     <width>1451</width>
+     <height>1081</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(217, 255, 251);</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page_1">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(217, 255, 251);</string>
+    </property>
+    <widget class="QListWidget" name="listWidget">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>190</y>
+       <width>971</width>
+       <height>791</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>1021</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="create_But">
+        <property name="text">
+         <string>创建进程</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="begin_But">
+        <property name="text">
+         <string>开始调度</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stop_But">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>停止调度</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="clear">
+        <property name="text">
+         <string>清空</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="block_But">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>阻塞进程</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Auto">
+        <property name="text">
+         <string>自动创建进程</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <property name="styleSheet">
+         <string notr="true">font: 11pt &quot;Arial&quot;;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>1.先来先服务</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2.高优先级</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3.时间片</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4.短作业优先</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>180</y>
+       <width>160</width>
+       <height>194</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="pid_text">
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;楷体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>    PID</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="pid__">
+          <property name="styleSheet">
+           <string notr="true">border-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="wake_But">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>唤醒进程</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="look_But">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>查看进程</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="delete_But">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>撤销进程</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>1170</x>
+       <y>190</y>
+       <width>251</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="A">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="text">
+         <string>系统资源A还剩余：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="B">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="text">
+         <string>系统资源B还剩余：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="C">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="text">
+         <string>系统资源C还剩余：</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>80</y>
+       <width>381</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 30pt &quot;华文琥珀&quot;;</string>
+     </property>
+     <property name="text">
+      <string>进程管理系统</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>1230</x>
+       <y>950</y>
+       <width>211</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/OIP (3).jpg);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <widget class="QTextEdit" name="time__">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>70</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Arial&quot;;
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="time_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>70</y>
+       <width>201</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Agency FB&quot;;</string>
+     </property>
+     <property name="text">
+      <string>运行时间</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="priority__">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>160</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Arial&quot;;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="priority_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>160</y>
+       <width>201</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Agency FB&quot;;</string>
+     </property>
+     <property name="text">
+      <string>优先级</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="certain_1">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>790</y>
+       <width>211</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 28pt &quot;Agency FB&quot;;</string>
+     </property>
+     <property name="text">
+      <string>确定</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="need_A_text">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>330</y>
+       <width>261</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Agency FB&quot;;</string>
+     </property>
+     <property name="text">
+      <string>资源A的需求量</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="need_B_text">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>420</y>
+       <width>261</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Agency FB&quot;;</string>
+     </property>
+     <property name="text">
+      <string>资源B的需求量</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="need_C_text">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>510</y>
+       <width>261</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Agency FB&quot;;</string>
+     </property>
+     <property name="text">
+      <string>资源C的需求量</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="need_A">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>330</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Arial&quot;;</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="need_B">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>420</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Arial&quot;;</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="need_C">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>510</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Arial&quot;;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Cancle">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>790</y>
+       <width>211</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 28pt &quot;Agency FB&quot;;</string>
+     </property>
+     <property name="text">
+      <string>取消</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3"/>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>begin_But</tabstop>
+  <tabstop>stop_But</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
